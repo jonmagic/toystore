@@ -14,7 +14,7 @@ describe Toy::Plugins do
 
       @mod = Module.new { extend ActiveSupport::Concern }
       @mod.const_set(:ClassMethods,    class_methods_mod)
-      @mod.const_set(:InstanceMethods, instance_methods_mod)
+      @mod.send(:include, instance_methods_mod)
 
       Toy.plugin(@mod)
     end

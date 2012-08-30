@@ -5,7 +5,7 @@ module Toy
 
     included do
       include Identity
-      attribute_method_suffix('', '=', '?')
+      attribute_method_suffix('=', '?')
     end
 
     module ClassMethods
